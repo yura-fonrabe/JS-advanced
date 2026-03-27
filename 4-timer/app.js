@@ -40,7 +40,7 @@ function countdown() {
     if (remainder < 10) remainder = '0' + remainder;
     document.querySelector('.timer__seconds').textContent = remainder;
 
-    console.log(diff);
+    // console.log(diff);
     if (diff === 0) {
         clearInterval(timerId);
     }
