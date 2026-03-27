@@ -16,7 +16,9 @@ const Ork = function(race, name, language, weapon) {
     this.language = language;
     this.weapon = weapon;
 }
-Ork.__proto__ = Personage;
+// Ork.__proto__ = Personage;
+Ork.prototype = Object.create(Personage.prototype);
+Ork.prototype.constructor = Ork;
 Ork.prototype.hit = function(){
     console.log('Орк нанес удар');
 }
