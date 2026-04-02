@@ -1,30 +1,35 @@
-class Count {
-    constructor(){
-        this.counter = 0
-    }
-}
-
-class fixBilling extends Count {
-    constructor() {
-        this.counter = 1;
-    }
-}
-
-class hourBilling extends Count{
-    constructor(hours) {
-        this.counter = hours;
-    }
-}
-
-class itemBilling extends Count{
-    constructor(items) {
-        this.counter = items;
-    }
-}
-
 class Billing {
-    #amount;
-    calculateTotal (var_counter) {
-        return this.#amount * var_counter.counter;
+    constructor(amount) {
+        this.amount = amount;
+    }
+    calculateTotal () {
+        return this.amount
+    }
+}
+
+class fixBilling extends Billing {
+    constructor(amount) {
+        super(amount)
+    }
+}
+
+class hourBilling extends Billing {
+    constructor (amount, hour) {
+        super()
+        this.hour = hour;
+    }
+
+    calculateTotal () {
+        return this.amount * this.hour;
+    }
+}
+
+class itemBilling extends Billing {
+    constructor(amount, item) {
+        super(amount);
+        this.item = item;
+    }
+    calculateTotal() {
+        return this.amount * this.item;
     }
 }
