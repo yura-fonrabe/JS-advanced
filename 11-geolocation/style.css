@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.image {
+    background-color: #1c1b21; 
+    text-align: center";
+}
