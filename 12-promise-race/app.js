@@ -5,13 +5,16 @@ async function getPoke(id) {
     return response.json();
 }
 
-async function main(){
-    const res = await Promise.race([
+async function race() {
+   const res = await Promise.race([
         getPoke(1),
         getPoke(2),
         getPoke(3)
     ])
-    console.log(res);
+    console.log(res); 
+}
+async function main(){
+    race()  
 }
 
 main();
