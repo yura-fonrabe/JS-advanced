@@ -10,7 +10,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "build": "rollup",
+    "build": "rollup -c",
     "start": "live-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
