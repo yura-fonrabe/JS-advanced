@@ -12,12 +12,13 @@ for (let i = 1; i < 6; i++) {
 
 let counter = 0;
 divButtons.addEventListener('click', function(event) {
-    console.log(event.target);
+
+    if (event.target.tagName !== 'BUTTON') return;
     const i = event.target.getAttribute('number');
     for (let el of [ ... divButtons.children]){
         if (el.getAttribute('class') == 'button_text'){
             if (el.getAttribute('number') == i) {
-                el.innerText = 'Нажата';
+                el.innerText = 'Нажата!';
             }else {
                 el.innerText = 'Нажми меня';
             }
